@@ -17,7 +17,7 @@ return {
     },
   },
   -- Set colorscheme to use
-  colorscheme = "carbonfox",
+  colorscheme = "everforest",
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
