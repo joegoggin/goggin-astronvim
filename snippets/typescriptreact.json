@@ -1,0 +1,23 @@
+{
+  "React Native Icon": {
+    "scope": "typescriptreact",
+    "prefix": "nicon",
+    "body": [
+      "import { $1 } from '@expo/vector-icons'",
+      "import React from 'react'",
+      "",
+      "import { IconProps } from 'app/types/IconProps'",
+      "",
+      "/*",
+      "\tprops: (size: string, color: string)",
+      "\tdescription: Reusable component that renders a $2 icon from '@expo/vector-icons' on Native.",
+      "*/",
+      "const $3Icon: React.FC<IconProps> = ({ size, color }) => {",
+      "\treturn <$1 name='$4' size={size} color={color} />",
+      "}",
+      "",
+      "export default $3Icon"
+    ],
+    "description": "Boilerplate code from rendering an Icon on Native"
+  }
+}
