@@ -26,6 +26,8 @@ return {
     -- Move code
     ["<M-j>"] = { "<cmd>m +1<cr>", desc = "Move code down one line" },
     ["<M-k>"] = { "<cmd>m -2<cr>", desc = "Move code up on line" },
+    -- Select
+    ["<C-a>"] = { "ggVG", desc = "Select All" },
     -- Buffers
     ["L"] = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
