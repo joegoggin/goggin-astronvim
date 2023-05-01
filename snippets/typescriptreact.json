@@ -203,5 +203,9 @@
       "",
       "export default $4Icon"
     ]
+  },
+  "Use Effect": {
+    "prefix": "uef",
+    "body": ["useEffect(() => {", "\t$0", "}, [$1])"]
   }
 }
