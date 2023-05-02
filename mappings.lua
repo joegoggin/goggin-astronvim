@@ -10,6 +10,11 @@ return {
     ["<C-v>"] = { "p", desc = "Paste" },
   },
   n = {
+    -- Window Split
+    ["<leader>w"] = { name = "Window" },
+    ["<leader>wv"] = { "<cmd>vsplit<cr>", desc = "Vertical Split" },
+    ["<leader>wh"] = { "<cmd>split<cr>", desc = "Horizontal Split" },
+    ["<leader>wc"] = { "<C-w>c", desc = "Close Window" },
     -- Change
     ["cc"] = { '"_cc', desc = "Change line" },
     ["cw"] = { '"_cw', desc = "Change word" },
