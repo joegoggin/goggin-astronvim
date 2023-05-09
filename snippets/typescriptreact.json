@@ -207,5 +207,16 @@
   "Use Effect": {
     "prefix": "uef",
     "body": ["useEffect(() => {", "\t$0", "}, [$1])"]
+  },
+  "Styles Object": {
+    "prefix": "styo",
+    "body": [
+      "// styles",
+      "const sx = useSx()",
+      "",
+      "const styles = {",
+      "\t$0",
+      "}"
+    ]
   }
 }
