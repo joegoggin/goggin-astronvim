@@ -31,6 +31,7 @@ return {
     -- Clipboard
     ["<C-c>"] = { "yy", desc = "Copy" },
     ["<C-v>"] = { "p", desc = "Paste" },
+    ["<C-x>"] = { "yydd", desc = "Cut" },
     -- Move code
     ["<M-j>"] = { "<cmd>m +1<cr>", desc = "Move code down one line" },
     ["<M-k>"] = { "<cmd>m -2<cr>", desc = "Move code up on line" },
@@ -70,6 +71,7 @@ return {
     -- Clipboard
     ["<C-c>"] = { "y", desc = "Copy Selection" },
     ["<C-v>"] = { "p", desc = "Paste Selection" },
+    ["<C-x>"] = { "ygvd", desc = "Cut Selection" },
   },
   t = {
     -- setting a mapping to false will disable it
