@@ -22,6 +22,8 @@ return {
     ["ci["] = { '"_ci[', desc = "Change inside []" },
     ["ci<"] = { '"_ci<', desc = "Change inside <>" },
     ["ci("] = { '"_ci(', desc = "Change inside ()" },
+    ['ci"'] = { '"_ci"', desc = 'Change inside ""' },
+    ["ci`"] = { '"_ci`', desc = "Change inside ``" },
     -- Delete
     ["dd"] = { '"_dd', desc = "Delete line" },
     ["dw"] = { '"_dw', desc = "Delete word" },
