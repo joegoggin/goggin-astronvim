@@ -221,6 +221,6 @@
   },
   "Use State": {
     "prefix": "ust",
-    "body": ["const [$1, $2] = useState<$3>($4)$0"]
+    "body": ["const [$1, set$2] = useState<$3>($4)$0"]
   }
 }
