@@ -7,7 +7,7 @@ return {
   -- first key is the mode
   i = {
     -- Clipboard
-    ["<C-v>"] = { "p", desc = "Paste" },
+    ["<C-v>"] = { "<C-R>+", desc = "Paste" },
   },
   n = {
     -- Window Split
