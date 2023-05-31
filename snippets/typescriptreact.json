@@ -222,5 +222,17 @@
   "Use State": {
     "prefix": "ust",
     "body": ["const [$1, set$2] = useState<$3>($4)$0"]
+  },
+  "tRPC useQuery": {
+    "prefix": "tuq",
+    "body": ["const { data: fetched$1 } = api.$2.get$1.useQuery($0)"]
+  },
+  "tRPC useMutation": {
+    "prefix": "tum",
+    "body": [
+      "const $1 = api.$2.$1.useMutation({",
+      "\tonError: onError(setError)",
+      "})"
+    ]
   }
 }
