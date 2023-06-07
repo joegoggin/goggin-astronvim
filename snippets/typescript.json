@@ -16,7 +16,7 @@
   "tRPC create": {
     "prefix": "tcre",
     "body": [
-      "create$1: $2Procedure",
+      "create$1: $2",
       "\t.input(",
       "\t\tz.object({",
       "\t\t\tdata: $1Schema",
@@ -34,7 +34,7 @@
       "\t\t\t\treturn { $3: $3 as $1 }",
       "\t\t\t}",
       "",
-      "\t\t\treturn { company: null }",
+      "\t\t\treturn { $3: null }",
       "\t\t} catch (error) {",
       "\t\t\tthrow error",
       "\t\t}",
@@ -44,12 +44,12 @@
   "tRPC update": {
     "prefix": "tup",
     "body": [
-      "update$1: $2Procedure",
+      "update$1: $2",
       "\t.input(z.object({",
-      "\t\t$3Id: z.string()",
+      "\t\t$3Id: z.string(),",
       "\t\tdata: $1Schema.partial()",
-      "\t})",
-      "\tmutation(async ({ ctx, input }) => {",
+      "\t}))",
+      "\t.mutation(async ({ ctx, input }) => {",
       "\t\tconst { $3Id, data } = input",
       "\t\ttry {",
       "\t\t\tconst updated$1 = await ctx.prisma.$3.update({",
@@ -60,7 +60,7 @@
       "\t\t\t\tinclude",
       "\t\t\t})",
       "",
-      "\t\t\tconst $3s = await ctx.prisma.$3.findMany({",
+      "\t\t\tconst updated$1s = await ctx.prisma.$3.findMany({",
       "\t\t\t\tinclude",
       "\t\t\t})",
       "",
@@ -68,7 +68,7 @@
       "\t\t\t\treturn { updated$1: updated$1 as $1, updated$1s: updated$1s as $1[]}",
       "\t\t\t}",
       "",
-      "\t\t\treturn { updated$1: null, updated$1: null }",
+      "\t\t\treturn { updated$1: null, updated$1s: null }",
       "\t\t} catch (error) {",
       "\t\t\thandlePrismaNotFoundError(error, '$1')",
       "",
@@ -80,7 +80,7 @@
   "tRPC get unique": {
     "prefix": "tgetu",
     "body": [
-      "get$1: $2Procedure",
+      "get$1: $2",
       "\t.input(z.object({",
       "\t\t$3Id: z.string()",
       "\t}))",
@@ -105,7 +105,7 @@
   "tRPC get many": {
     "prefix": "tgetm",
     "body": [
-      "get$1: $2Procedure",
+      "get$1: $2",
       "\t.query(async ({ ctx }) => {",
       "\t\ttry {",
       "\t\t\tconst $3s = await ctx.prisma.$3.findMany({",
@@ -122,10 +122,10 @@
   "tRPC delete": {
     "prefix": "tdel",
     "body": [
-      "delete$1: $2Procedure",
+      "delete$1: $2",
       "\t.input(z.object({",
       "\t\t$3Id: z.string()",
-      "\t})",
+      "\t}))",
       "\t.mutation(async ({ ctx, input }) => {",
       "\t\tconst { $3Id } = input",
       "",
